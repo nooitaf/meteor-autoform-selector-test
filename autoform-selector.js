@@ -23,7 +23,7 @@ Tags.attachSchema(
 if (Meteor.isClient) {
 
   UI.registerHelper("tagList", function(){
-      return Tags.find({},{sort:{title_short:1}}).map(function(itm){
+      return Tags.find({},{sort:{name:1}}).map(function(itm){
           return {
               label:itm.name,
               value:itm._id
