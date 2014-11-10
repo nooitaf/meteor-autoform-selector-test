@@ -1,0 +1,18 @@
+<head>
+  <title>autoform-selector</title>
+</head>
+
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+
+	{{#autoForm collection="Books" doc=book id="updateBookForm" type="update"}}
+		{{> afQuickField name="tags" options=tagList noselect="true"}}
+		<input type="submit">
+	{{/autoForm}}
+
+	<pre>{{stringify book}}</pre>
+
+</template>
